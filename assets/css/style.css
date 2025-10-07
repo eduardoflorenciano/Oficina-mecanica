@@ -480,10 +480,25 @@ h2 {
 .faq-icone {
     color: var(--cor-primaria);
     transition: var(--transicao);
+    font-size: 0.8rem;
 }
 
 details[open] .faq-icone {
     transform: rotate(180deg);
+}
+
+details {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+details:hover {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 2px 8px rgba(143, 21, 21, 0.1);
 }
 
 details p {
@@ -506,10 +521,51 @@ summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+summary:hover {
+    background-color: #f8f8f8;
+    color: var(--cor-primaria);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::marker {
+    display: none;
 }
 
 details[open] summary {
     color: var(--cor-primaria);
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0;
+}
+
+details p {
+    padding: 1rem;
+    color: #555;
+    line-height: 1.8;
+    animation: fadeInDown 0.4s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+details[open] {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Seção: Atendimento */
