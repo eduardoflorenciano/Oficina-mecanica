@@ -66,7 +66,7 @@ const menuLinks = document.querySelectorAll('.navegacao-header a');
 
 // Criar overlay
 const overlay = document.createElement('div');
-overlay.classList.add('.menu-overlay');
+overlay.classList.add('menu-overlay');
 document.body.appendChild(overlay);
 
 // Toggle do menu
